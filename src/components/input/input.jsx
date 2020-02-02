@@ -17,6 +17,7 @@ const Input = props => {
         onChange={props.onChange}
         className="form-control"
         id={htmlFor}
+        value={props.value}
       />
       {isInvalid(props) ? (
         <span>(props.errorMessage || "Поле не должно быть пустым")</span>

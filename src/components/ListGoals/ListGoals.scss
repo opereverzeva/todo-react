@@ -1,0 +1,9 @@
+.list-item {
+    border: none;
+    background: orange;
+
+}
+
+.list-item:nth-of-type(2n) {
+    background: gray
+}

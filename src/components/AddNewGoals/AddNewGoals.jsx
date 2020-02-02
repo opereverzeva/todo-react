@@ -31,18 +31,20 @@ class AddNewGoals extends Component {
   };
   render() {
     return (
-      <div className="container">
-        <form
-          action="#"
-          className="form-row"
-          style={{ alignItems: "flex-end" }}
-        >
-          <Input htmlFor="text" onChange={this.handleChange} />
-          <Button disabled={this.state.disabled} onClick={this.createGoals}>
-            +
-          </Button>
-        </form>
-      </div>
+      <form
+        action="#"
+        className="form-row my-4"
+        style={{ alignItems: "flex-end" }}
+      >
+        <Input
+          value={this.state.value}
+          htmlFor="text"
+          onChange={this.handleChange}
+        />
+        <Button disabled={this.state.disabled} onClick={this.createGoals}>
+          +
+        </Button>
+      </form>
     );
   }
 }
