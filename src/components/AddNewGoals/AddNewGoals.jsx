@@ -4,9 +4,6 @@ import Input from "../input/input";
 import Button from "../Button/Button";
 
 class AddNewGoals extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     isFormValid: false,
     value: "",

@@ -19,15 +19,11 @@ class App extends Component {
     console.log(this.state.value);
   };
 
-  onDeleteGoal = () => {
-    console.log("rew");
-  };
-
   render() {
     return (
       <div className="container">
         <AddNewGoals addNewGoals={this.onChangeList} />
-        <ListGoals goals={this.state.value} deleteGoal={this.onDeleteGoal} />
+        <ListGoals goals={this.state.value} />
       </div>
     );
   }

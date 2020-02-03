@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
 
+
 }
 
 .list-item:nth-of-type(2n) {
@@ -12,4 +13,12 @@
 
 .text {
     max-width: 90%;
+}
+
+.item-success {
+    opacity: 0.8;
+}
+
+.custom-control-input {
+    cursor: pointer;
 }
