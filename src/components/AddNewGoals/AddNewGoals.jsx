@@ -41,7 +41,11 @@ class AddNewGoals extends Component {
           htmlFor="text"
           onChange={this.handleChange}
         />
-        <Button disabled={this.state.disabled} onClick={this.createGoals}>
+        <Button
+          buttonType={"btn btn-primary"}
+          disabled={this.state.disabled}
+          onClick={this.createGoals}
+        >
           +
         </Button>
       </form>

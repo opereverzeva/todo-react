@@ -1,9 +1,15 @@
 .list-item {
     border: none;
     background: orange;
+    display: flex;
+    justify-content: space-between;
 
 }
 
 .list-item:nth-of-type(2n) {
     background: gray
+}
+
+.text {
+    max-width: 90%;
 }

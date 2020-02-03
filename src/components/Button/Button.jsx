@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = props => (
   <button
-    className="btn btn-primary"
+    className={props.buttonType}
     disabled={props.disabled}
     onClick={props.onClick}
   >
