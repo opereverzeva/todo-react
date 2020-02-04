@@ -16,14 +16,22 @@ class App extends Component {
     this.setState({
       value: arrGoals
     });
-    console.log(this.state.value);
+  };
+
+  editedGoals = (goal, key) => {
+    console.log(goal, key);
+    this.state.value[key] = goal;
+    // arrGoals.push(goal);
+    // this.setState({
+    //   value: arrGoals
+    // });
   };
 
   render() {
     return (
       <div className="container">
         <AddNewGoals addNewGoals={this.onChangeList} />
-        <ListGoals goals={this.state.value} />
+        <ListGoals goals={this.state.value} editedGoals={this.editedGoals} />
       </div>
     );
   }

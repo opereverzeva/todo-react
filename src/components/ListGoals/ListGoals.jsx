@@ -1,41 +1,50 @@
-import React from "react";
+import React, { Component } from "react";
 import classes from "./ListGoals.scss";
-import Button from "../Button/Button";
+import CardGoal from "../CardGoal/CardGoal";
 
-const ListGoals = ({ goals }) => {
-  const deleteGoal = event => {
-    event.preventDefault();
-    const currentNode = event.target.parentElement;
-    currentNode.remove();
+import ChangeGoals from "../ChangeGoals/ChangeGoals";
+
+class ListGoals extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      editKey: -1
+    };
+  }
+
+  editGoal = value => {
+    const key = Number(value.parentNode.dataset.set);
+    this.setState({
+      editKey: key
+    });
+    console.log(this.state.editKey);
   };
 
-  const finishGoal = event => {
-    const currentNode = event.target.parentElement;
-    const currentItem = event.target;
-    currentNode.classList += " item-success";
-    console.log(currentItem);
-    currentItem.disabled = true;
+  changedGoal = value => {
+    console.log("value", value);
+    this.props.editedGoals(value, this.state.editKey);
+    this.setState({
+      editKey: -1
+    });
   };
 
-  return (
-    <ul className="list-group col-8 ">
-      {goals.map((goal, index) => (
-        <li key={index} className="list-group-item list-item">
-          <input
-            buttonType={"custom-control-input"}
-            disabled={false}
-            onClick={finishGoal}
-            type="checkbox"
-          />
-
-          <p className="m-0 text">{goal}</p>
-          <Button buttonType={"close"} disabled={false} onClick={deleteGoal}>
-            &times;
-          </Button>
-        </li>
-      ))}
-    </ul>
-  );
-};
+  render() {
+    return (
+      <ul className="list-group col-8 ">
+        {this.props.goals.map((goal, index) => (
+          <li key={index} data-set={index}>
+            {this.state.editKey === index ? (
+              <div className="list-group-item">
+                <ChangeGoals value={goal} editGoals={this.changedGoal} />
+              </div>
+            ) : (
+              <CardGoal value={goal} editGoal={this.editGoal} />
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
 
 export default ListGoals;
