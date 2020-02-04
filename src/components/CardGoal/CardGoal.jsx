@@ -48,13 +48,15 @@ class CardGoal extends Component {
             buttonType={"close mx-4"}
             disabled={false}
             onClick={this.editGoal}
+            title={"Редактировать"}
           >
-            Edit
+            <i class="fa fa-pencil" />
           </Button>
           <Button
             buttonType={"close"}
             disabled={false}
             onClick={this.deleteGoal}
+            title={"Удалить"}
           >
             &times;
           </Button>
