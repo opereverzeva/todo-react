@@ -18,13 +18,13 @@ class CardGoal extends Component {
   };
   deleteGoal = event => {
     event.preventDefault();
-    const currentNode = event.target.parentElement.parentElement.parentElement;
+    const currentNode = event.target.parentElement.parentElementc.parentElement;
     console.log(currentNode);
     currentNode.remove();
   };
 
   editGoal = event => {
-    const currentNode = event.target.parentElement.parentElement;
+    const currentNode = event.target.parentElement.parentElement.parentElement;
     this.setState({
       edit: true
     });
