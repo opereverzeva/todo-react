@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./input.scss";
 
 function isInvalid({ valid, touched, shouldValidate }) {
   return !valid && shouldValidate && touched;
@@ -11,7 +12,9 @@ const Input = props => {
 
   return (
     <div className="col-8">
-      <label htmlFor={htmlFor}>Введите новую задачу</label>
+      <label htmlFor={htmlFor} className={props.labelHidden}>
+        {props.label}
+      </label>
       <input
         type={inputType}
         onChange={props.onChange}

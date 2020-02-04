@@ -18,12 +18,12 @@ class CardGoal extends Component {
   };
   deleteGoal = event => {
     event.preventDefault();
-    const currentNode = event.target.parentElement.parentElement;
+    const currentNode = event.target.parentElement.parentElement.parentElement;
+    console.log(currentNode);
     currentNode.remove();
   };
 
   editGoal = event => {
-    console.log(event.target);
     const currentNode = event.target.parentElement.parentElement;
     this.setState({
       edit: true
@@ -34,7 +34,7 @@ class CardGoal extends Component {
 
   render() {
     return (
-      <div className="list-group-item  list-item">
+      <div className="card-item">
         <input
           buttonType={"custom-control-input"}
           disabled={false}

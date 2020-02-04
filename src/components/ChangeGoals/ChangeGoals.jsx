@@ -11,28 +11,24 @@ class ChangeGoals extends Component {
   editGoals = event => {
     event.preventDefault();
     this.props.editGoals(this.state.value);
-    console.log(event.target.value);
-    console.log(this.props);
   };
 
   handleChange = event => {
-    console.log(event.target.value);
-
     const newValue = event.target.value;
-    console.log("newValue ", newValue);
+
     this.setState({
       value: newValue
     });
-
-    console.log("val ", this.state.value);
   };
   render() {
     return (
-      <form className="form-row my-4" style={{ alignItems: "flex-end" }}>
+      <form className="form-row card-item" style={{ alignItems: "flex-end" }}>
         <Input
           value={this.state.value}
           htmlFor="text"
           onChange={this.handleChange}
+          label=""
+          labelHidden={"hidden"}
         />
         <Button
           buttonType={"btn btn-ligth"}

@@ -37,6 +37,7 @@ class AddNewGoals extends Component {
           value={this.state.value}
           htmlFor="text"
           onChange={this.handleChange}
+          label={"Введите новую задачу"}
         />
         <Button
           buttonType={"btn btn-primary"}

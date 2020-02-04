@@ -1,8 +1,7 @@
 .list-item {
     border: none;
     background: orange;
-    display: flex;
-    justify-content: space-between;
+    padding: 0;
 
 
 }
@@ -21,4 +20,12 @@
 
 .custom-control-input {
     cursor: pointer;
+}
+
+.card-item {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: inherit;
 }

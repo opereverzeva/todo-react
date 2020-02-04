@@ -32,11 +32,13 @@ class ListGoals extends Component {
     return (
       <ul className="list-group col-8 ">
         {this.props.goals.map((goal, index) => (
-          <li key={index} data-set={index}>
+          <li
+            key={index}
+            data-set={index}
+            className="list-group-item list-item"
+          >
             {this.state.editKey === index ? (
-              <div className="list-group-item">
-                <ChangeGoals value={goal} editGoals={this.changedGoal} />
-              </div>
+              <ChangeGoals value={goal} editGoals={this.changedGoal} />
             ) : (
               <CardGoal value={goal} editGoal={this.editGoal} />
             )}
