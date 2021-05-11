@@ -2265,6 +2265,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-icons@^1.0.0-alpha2:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.5.0.tgz#2cb19da148aa9105cb3174de2963564982d3dc55"
+  integrity sha512-44feMc7DE1Ccpsas/1wioN8ewFJNquvi5FewA06wLnqct7CwMdGDVy41ieHaacogzDqLfG8nADIvMNp9e4bfbA==
+
 bootstrap@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
@@ -4878,9 +4883,9 @@ hmac-drbg@^1.0.0:
     minimalistic-crypto-utils "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
-  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 hpack.js@^2.1.6:
   version "2.1.6"
